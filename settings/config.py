@@ -6,10 +6,12 @@ from pydantic import BaseModel, ValidationError
 # Initialize the logger for configuration loading
 logger = BotLogger("CONFIG")
 
+
 class BotConfig(BaseModel):
     api_id: str
     api_hash: str
     bot_token: str
+
 
 def load_config() -> BotConfig:
     """

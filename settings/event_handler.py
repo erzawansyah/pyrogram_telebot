@@ -4,9 +4,11 @@ from settings.logger import BotLogger
 from pydantic import BaseModel
 from typing import Optional
 
+
 class EventHandlerType(BaseModel):
     filename: str
     description: Optional[str] = None
+
 
 class EventHandler:
     def __init__(
@@ -21,7 +23,7 @@ class EventHandler:
     def __execute(self, module, filename: str):
         """
         Execute the handler function from the module.
-        
+
         Args:
             module: The module containing the handler function.
             filename (str): The filename of the event handler.
@@ -36,7 +38,7 @@ class EventHandler:
     def __event_handler(self, filename: str):
         """
         Load and execute the event handler module.
-        
+
         Args:
             filename (str): The filename of the event handler.
         """
@@ -50,7 +52,7 @@ class EventHandler:
     def register(self, event: EventHandlerType):
         """
         Register an event handler.
-        
+
         Args:
             event (EventHandlerType): The event handler type to register.
         """

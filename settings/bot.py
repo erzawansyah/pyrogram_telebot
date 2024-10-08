@@ -5,10 +5,11 @@ from settings.config import load_config
 # Initialize the logger for bot initialization
 logger = BotLogger("INITIALIZATION")
 
+
 def init_bot() -> Client:
     """
     Initialize and configure the Telegram bot.
-    
+
     Returns:
         Client: Configured Telegram client.
     """
